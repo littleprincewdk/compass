@@ -15,8 +15,8 @@ $(function(){
         minuteLength:15,
         minuteWidth:1,
         minuteColor:'#000',
-        figureRadius:240,
-        figureFont:'18px Arial',
+        figureRadius:150,
+        figureFont:'16px Arial',
         figureColor:'#2f54c4',
     };
     var compassWidth=$Compass.width(),
@@ -103,23 +103,22 @@ $(function(){
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(repaint,showError);
         } else {
-            $ShowError.html('该浏览器不支持获取地理位置。');
+            alert('该浏览器不支持获取地理位置。');
         }
     }
     function showError(error){
-        console.log(1);
         switch(error.code) {
             case error.PERMISSION_DENIED:
-                $ShowError.html('用户拒绝对获取地理位置的请求。');
+                alert('用户拒绝对获取地理位置的请求。');
                 break;
             case error.POSITION_UNAVAILABLE:
-                $ShowError.html('位置信息是不可用的。');
+                alert('位置信息是不可用的。');
                 break;
             case error.TIMEOUT:
-                $ShowError.html('请求用户地理位置超时。');
+                alert('请求用户地理位置超时。');
                 break;
             case error.UNKNOWN_ERROR:
-                $ShowError.html('未知错误。');
+                alert('未知错误。');
                 break;
         }
     }
