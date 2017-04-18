@@ -1,0 +1,21 @@
+{
+  "name": "y",
+  "homepage": "https://github.com/littleprincewdk/compass",
+  "authors": [
+    "wudengke <2889110370@qq.com>"
+  ],
+  "description": "h5 指南针",
+  "main": "index.js",
+  "keywords": [
+    "compass",
+    "h5"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
