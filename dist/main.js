@@ -5,7 +5,10 @@ $(function(){
     'use strict';
 
     var $Compass=$('#compass');
-    var $ShowError=$('#show-error');
+    var $LocationDetail=$('#location-detail'),
+        $Latitude=$('#detail-latitude'),
+        $Longitude=$('#detail-longitude'),
+        $Altitude=$('#detail-altitude');
     var settings={
         radius:100,
         space:30,               //每隔多少秒针作为一个分针
@@ -123,6 +126,8 @@ $(function(){
         }
     }
     function repaint(position){
-        $ShowError.html(position.coords.heading+'     '+position.coords.latitude)
+        $Latitude.html(position.coords.latitude);
+        $Longitude.html(position.coords.longitude);
+        $Altitude.html(position.coords.altitude);
     }
 });
