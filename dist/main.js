@@ -101,7 +101,7 @@ $(function(){
     function getLocation()
     {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(repaint,showError);
+            navigator.geolocation.watchPosition(repaint,showError);
         } else {
             alert('该浏览器不支持获取地理位置。');
         }
