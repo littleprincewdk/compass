@@ -123,7 +123,6 @@ $(function(){
         }
     }
     function repaint(position){
-        console.log(1)
-        alert(position.coords.heading)
+        $ShowError.html(position.coords.heading)
     }
 });
