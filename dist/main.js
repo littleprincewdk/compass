@@ -18,8 +18,8 @@ $(function(){
         minuteLength:15,
         minuteWidth:1,
         minuteColor:'#000',
-        figureRadius:150,
-        figureFont:'16px Arial',
+        figureRadius:130,
+        figureFont:'14px Arial',
         figureColor:'#2f54c4',
     };
     var compassWidth=$Compass.width(),
