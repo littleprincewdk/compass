@@ -27,13 +27,13 @@ body {
 }
 #location-detail{
   margin:0 auto;
-  text-align:left;
   font-size:16px;
   color:#000;
   white-space: nowrap;
   td{
     min-width:50px;
     height:24px;
+    text-align:left;
   }
   .value{
     text-align: right;
