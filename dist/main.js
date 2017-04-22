@@ -21,11 +21,12 @@ $(function(){
         figureRadius:130,
         figureFont:'14px Arial',
         figureColor:'#2f54c4',
+        scale:2,
     };
     var compassWidth=$Compass.width(),
         compassHeight=$Compass.height();
-    $Compass[0].width=compassWidth;
-    $Compass[0].height=compassHeight;
+    $Compass[0].width=compassWidth*settings.scale;
+    $Compass[0].height=compassHeight*settings.scale;
     var context=$Compass[0].getContext('2d');
 
     init();
@@ -34,7 +35,9 @@ $(function(){
         drawPlate();
         getLocation();
     }
+
     function drawPlate(){
+        context.scale(settings.scale,settings.scale);
         context.translate(compassWidth/2,compassHeight/2);
         context.save();
 
