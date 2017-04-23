@@ -37,9 +37,9 @@ $(function(){
     }
 
     function drawPlate(){
+        context.save();
         context.scale(settings.scale,settings.scale);
         context.translate(compassWidth/2,compassHeight/2);
-        context.save();
 
         drawSecond();
         drawMinute();
